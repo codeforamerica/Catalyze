@@ -145,6 +145,58 @@ function project_intake_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-intake-field_location_project'
+  $fields['node-intake-field_location_project'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_location_project',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'geofield',
+      'settings' => array(),
+      'translatable' => '1',
+      'type' => 'geofield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'intake',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => NULL,
+          'settings' => array(),
+          'type' => 'default',
+          'weight' => 3,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_location_project',
+      'label' => 'Location',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'geofield',
+        'settings' => array(),
+        'type' => 'geofield_textfields',
+        'weight' => '4',
+      ),
+    ),
+  );
+
   // Exported field: 'node-intake-field_status'
   $fields['node-intake-field_status'] = array(
     'field_config' => array(
@@ -211,11 +263,83 @@ function project_intake_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-intake-field_urgency'
+  $fields['node-intake-field_urgency'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_urgency',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          '0' => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          '0' => array(
+            'parent' => '0',
+            'vocabulary' => 'urgency',
+          ),
+        ),
+      ),
+      'translatable' => '1',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'intake',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 4,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_urgency',
+      'label' => 'Urgency',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '5',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Description');
+  t('Location');
   t('Status');
+  t('Urgency');
 
   return $fields;
 }
