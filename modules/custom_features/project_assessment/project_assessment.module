@@ -1,0 +1,3 @@
+<?php
+
+include_once('project_assessment.features.inc');
