@@ -31,14 +31,32 @@ function project_assessment_node_info() {
       'title_label' => t('What do you want to call this project?'),
       'help' => '',
     ),
-    'profile' => array(
-      'name' => t('Profile'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
+  return $items;
+}
+
+/**
+ * Implementation of hook_default_profile2_type().
+ */
+function project_assessment_default_profile2_type() {
+  $items = array();
+  $items['anonymous_profile'] = entity_import('profile2_type', '{
+    "userCategory" : false,
+    "userView" : false,
+    "type" : "anonymous_profile",
+    "label" : "Anonymous Profile",
+    "weight" : "0",
+    "data" : { "registration" : 0, "use_page" : 1 },
+    "rdf_mapping" : []
+  }');
+  $items['main'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "main",
+    "label" : "Main profile",
+    "weight" : "0",
+    "data" : { "registration" : 1, "use_page" : 0 },
+    "rdf_mapping" : []
+  }');
   return $items;
 }

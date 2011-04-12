@@ -36,7 +36,7 @@ function project_assessment_taxonomy_default_vocabularies() {
       'name' => 'Contact Preferences',
       'machine_name' => 'contact_preferences',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(
@@ -59,6 +59,29 @@ function project_assessment_taxonomy_default_vocabularies() {
       'name' => 'Objectives & Initiatives',
       'machine_name' => 'objectives',
       'description' => 'Desired civic objectives',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'population_size' => array(
+      'name' => 'Population Size',
+      'machine_name' => 'population_size',
+      'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
