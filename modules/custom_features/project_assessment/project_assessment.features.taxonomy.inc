@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * project_assessment.features.taxonomy.inc
+ */
 
 /**
  * Implementation of hook_taxonomy_default_vocabularies().
@@ -14,16 +18,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -37,22 +41,45 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'objectives' => array(
+      'name' => 'Objectives & Initiatives',
+      'machine_name' => 'objectives',
+      'description' => 'Desired civic objectives',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
           ),
         ),
       ),
     ),
     'problem_categories' => array(
-      'name' => 'Problem Categories',
+      'name' => 'Project Categories',
       'machine_name' => 'problem_categories',
       'description' => 'If you could only pick one approach to solving your problem, which one would you choose?',
       'hierarchy' => '0',
@@ -60,16 +87,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -83,16 +110,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -106,16 +133,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -129,16 +156,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -152,16 +179,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -175,16 +202,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
@@ -198,16 +225,16 @@ function project_assessment_taxonomy_default_vocabularies() {
       'weight' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
-          '0' => 'skos:ConceptScheme',
+          0 => 'skos:ConceptScheme',
         ),
         'name' => array(
           'predicates' => array(
-            '0' => 'dc:title',
+            0 => 'dc:title',
           ),
         ),
         'description' => array(
           'predicates' => array(
-            '0' => 'rdfs:comment',
+            0 => 'rdfs:comment',
           ),
         ),
       ),
