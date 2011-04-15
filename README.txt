@@ -15,4 +15,8 @@ required for Catalyze.
 
 In the meantime, our Drupal 7 has a few modules installed:
 
-admin ctools devel features fusion views
+admin advanced help backup_migrate cck coder ctools date devel email 
+entity features field_group libraries link markdown openlayers pathauto
+ references skinr strongarm token views workbench
+
+fusion
